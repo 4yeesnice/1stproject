@@ -8,3 +8,4 @@ while i<len(names):
         salaries.append(0)
     i+=1
 print(salaries)
+# While лучше использовать, когда хочешь изменить что-то в списке
