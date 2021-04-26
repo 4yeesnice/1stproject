@@ -2,7 +2,6 @@
 Functions
 '''
 
-
 # def max_of_list(numbers):
 #     return (max(numbers))
 #
@@ -16,37 +15,49 @@ Functions
 #         print(x)
 #     else:
 #         print(y)
-list = {"username":[],
-        'password':[]
+list = {"username": [],
+        'password': []
         }
 def registration():
-    username = input()
-    # >8 symbols
-    password = input()
-    # only letters
-    check_password = input()
-    if len(username)>=8 and password.isalpha() == False:
-        if check_password == password:
-            return username,password
+    i = 0
+    while i != 2:
+        username = input()
+        # >8 symbols
+        password = input()
+        # only letters
+        check_password = input()
+        if len(username) >= 8 and password.isalpha() is False:
+            if check_password == password:
+                return username, password
+            i = 2
+        else:
+            print("Ошибка! Используйте больше чем 8 символов в логине. Придумайте пароль с цифрами и буквами!")
+            i = 2
+
+
 try:
     i = 0
-    while i<=2:
-            username, password = registration()
-            list['username'].append(username)
-            list['password'].append(password)
-            i+=1
+    while i <= 2:
+        username, password = registration()
+        list['username'].append(username)
+        list['password'].append(password)
+        i += 1
     print(list)
+
+
     def log_in(list):
-            login = input()
-            password = input()
-            i = 0
-            while i < len(list['username']):
-                if login in list['username'][i] and password in list['password'][i]:
-                    print("SUCCESFUL")
-                    break
-                else:
-                    print("UNSUCCESFUL")
-                    i+=1
+        login = input()
+        password = input()
+        i = 0
+        while i < len(list['username']):
+            if login in list['username'][i] and password in list['password'][i]:
+                print("SUCCESFUL")
+                break
+            else:
+                print("UNSUCCESFUL")
+                i += 1
+
+
     log_in(list)
 except TypeError:
-    print("Введите правильные данные")
+    ()

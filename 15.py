@@ -11,5 +11,17 @@
 # print(neihgboors)
     #
     # numbers = [2,7,7,7,8,9,10,12,14,7,6,3,4,7,1,8]
-    kek = "bobobobobo112223b"
-    print(kek.isalpha())
+
+def reg():
+    x = int(input())
+    y = int(input())
+    z = x+y
+    if z == 5:
+        return z
+z = reg()
+def close():
+    if z == 5:
+        print("im clsoing")
+        ()
+
+close()
